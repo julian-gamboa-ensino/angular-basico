@@ -1,0 +1,158 @@
+
+<!--Header do Boostrap--------->
+<header>
+    <div class="bg-dark collapse" id="navbarHeader" >
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-md-7 py-4">
+            <h4 class="text-white">Funções</h4>
+            <p class="text-muted">
+Ver imagens associadas com cada etiqueta<br>
+Estatísticas de uso<br>
+Últimas etiquetas<br>
+</p>
+          </div>
+          <div class="col-sm-4 offset-md-1 py-4">
+            <h4 class="text-white">Contact</h4>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-white">Follow on Twitter</a></li>
+              <li><a href="#" class="text-white">Like on Facebook</a></li>
+              <li><a href="#" class="text-white">Email me</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="navbar navbar-dark bg-dark box-shadow">
+      <div class="container d-flex justify-content-between">
+<a href="./php/novembro2020.html" class="navbar-brand d-flex align-items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+          <strong> {{etiqueta}} (2021) </strong>
+        </a>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+</header>
+<!--END Header do Boostrap--------->          
+<main role="main">
+<div class="album py-5 bg-light">
+<div class="container">          
+<!--ROW. Inicio---------> 
+<div class="row">
+<!--Elemento da Matriz---------> 
+<div class="col-md-4">
+<div class="card mb-4 box-shadow">
+<!--Image--------->          
+          <img id="imagem-1" src="{{imagem[indice_imagen]}}"
+          (click)="open()"
+          class="card-img-top" alt="Image 1" style="height: 225px; width: 100%; display: block;" 
+           >
+</div>
+</div>
+<!--COL------>           
+<div class="col-md-4">
+<div class="card mb-4 box-shadow">
+<!--Image--------->          
+          <img id="imagem-2" src="{{imagem[indice_imagen+1]}}"
+          class="card-img-top" alt="Image 2" style="height: 225px; width: 100%; display: block;" 
+          >
+</div>
+</div>
+<!--END: COL. ------>      
+<!--COL. ------>           
+<div class="col-md-4">
+<div class="card mb-4 box-shadow">
+<!--Image--------->          
+  <img id="imagem-3" src="{{imagem[indice_imagen+2]}}"
+  class="card-img-top" alt="Image 3" style="height: 225px; width: 100%; display: block;" 
+  >
+</div>
+</div>
+<!--END: COL. ------>      
+</div>  
+<!--END: ROW. ------>
+
+
+<!--ROW. Inicio---------> 
+<div class="row">
+<!--Elemento da Matriz---------> 
+<div class="col-md-4">
+<div class="card mb-4 box-shadow">
+<!--Image--------->          
+          <img id="imagem-4" src="{{imagem[indice_imagen+3]}}"
+          class="card-img-top" alt="Image 4" style="height: 225px; width: 100%; display: block;" 
+          >
+</div>
+</div>
+<!--COL. ------>           
+<div class="col-md-4">
+<div class="card mb-4 box-shadow">
+<!--Image--------->          
+          <img id="imagem-5" src="{{imagem[indice_imagen+4]}}"
+          class="card-img-top" alt="Image 5" style="height: 225px; width: 100%; display: block;" 
+          >
+</div>
+</div>
+<!--END: COL. ------>      
+<!--COL. ------>           
+<div class="col-md-4">
+<div class="card mb-4 box-shadow">
+<!--Image--------->          
+  <img id="imagem-6" src="{{imagem[indice_imagen+5]}}"
+  class="card-img-top" alt="Image 6" style="height: 225px; width: 100%; display: block;" 
+  >
+</div>
+</div>
+<!--END: COL. ------>      
+</div>  
+<!--END: ROW. ------>
+
+
+
+<!--ROW. Inicio---------> 
+<div class="row">
+<!--Elemento da Matriz---------> 
+<div class="col-md-4">
+<div class="card mb-4 box-shadow">
+<!--Image--------->          
+          <img id="imagem-7" src="{{imagem[indice_imagen+6]}}"
+          class="card-img-top" alt="Image 7" style="height: 225px; width: 100%; display: block;" 
+          >
+</div>
+</div>
+<!--COL. ------>           
+<div class="col-md-4">
+<div class="card mb-4 box-shadow">
+<!--Image--------->          
+          <img id="imagem-8" src="{{imagem[indice_imagen+7]}}"
+          class="card-img-top" alt="Image 8" style="height: 225px; width: 100%; display: block;" 
+          >
+</div>
+</div>
+<!--END: COL. ------>      
+<!--COL. ------>           
+<div class="col-md-4">
+<div class="card mb-4 box-shadow">
+<!--Image--------->          
+  <img id="imagem-9" src="{{imagem[indice_imagen+8]}}"
+  class="card-img-top" alt="Image 9" style="height: 225px; width: 100%; display: block;" 
+  >
+</div>
+</div>
+<!--END: COL. ------>      
+</div>  
+<!--END: ROW. ------>
+</div>
+</div>
+</main>
+
+  <footer class="text-muted">
+    <div class="container">
+      <p class="float-right">
+        <a >Consultando DB</a>
+      </p>
+      <p>Colocado no meu <a href="https://github.com/julian-gamboa-ensino/node-gestor-imagens">Github de esnino</a> </p>                        
+    </div>
+  </footer>
