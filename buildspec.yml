@@ -3,13 +3,13 @@ version: 0.2
 phases:
   pre_build:
     commands:
-       - echo Instalando (Installing source NPM dependencies)...
+       - echo Instalando...
        - npm install
        - npm install -g @angular/cli
        - echo Finished installing NPM dependencies.
   build:
     commands:
-       - echo (Building)...
+       - echo Building...
        - ng build --prod --aot
        - echo Finalizando.
   post_build:
