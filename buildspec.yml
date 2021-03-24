@@ -12,10 +12,6 @@ phases:
        - echo Building...
        - ng build --prod --aot
        - echo Finalizando.
-  post_build:
-    commands:
-       - echo Syncing site to S3 bucket...
-       - export LC_ALL=C.UTF-8
-       - cd dist/paramestros-etiquetas/
-       - aws s3 sync --cache-control max-age=86400 --acl public-read --delete . s3://elaine.sergipe
-       - echo Build completed on `date`
+artifacts:
+  files:
+    - index.html
