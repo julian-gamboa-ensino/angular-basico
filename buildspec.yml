@@ -1,0 +1,23 @@
+            - aws s3 cp ${BUILD_FOLDER} s3://${S3_BUCKET} --recursive --acl public-read --cache-control "max-age=${CACHE_CONTROL}"
+            - echo Build completed on `date`
+            
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+       - echo Instalando (Installing source NPM dependencies)...
+       - npm install
+       - npm install -g @angular/cli
+       - echo Finished installing NPM dependencies.
+  build:
+    commands:
+       - echo (Building)...
+       - ng build --prod --aot
+       - echo Finalizando.
+  post_build:
+    commands:
+       - echo Syncing site to S3 bucket...
+       - export LC_ALL=C.UTF-8
+       - cd dist && aws s3 sync --cache-control max-age=86400 --acl public-read --delete . s3://elaine.sergipe
+       - echo Build completed on `date`
