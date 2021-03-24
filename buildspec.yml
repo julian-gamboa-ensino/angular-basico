@@ -16,5 +16,6 @@ phases:
     commands:
        - echo Syncing site to S3 bucket...
        - export LC_ALL=C.UTF-8
+       - cd dist
        - aws s3 cp dist s3://elaine.sergipe --recursive --acl public-read --cache-control max-age=86400
        - echo Build completed on `date`
